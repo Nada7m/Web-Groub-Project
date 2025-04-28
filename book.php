@@ -1,35 +1,21 @@
-<?php
-// إعداد الاتصال بقاعدة البيانات
-$servername = "localhost";
-$username = "root"; // اسم المستخدم لقاعدة البيانات
-$password = "";     // كلمة المرور لقاعدة البيانات (غالباً فاضي في السيرفر المحلي)
-$dbname = "soland"; // اسم قاعدة البيانات
+<?php 
+// الاتصال بقاعدة البيانات
+$con = mysqli_connect("localhost", "root", "", "soland");
 
-// إنشاء الاتصال
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// التحقق من الاتصال
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!$con) {
+    die('Cannot connect!: ' . mysqli_connect_error());
 }
 
-// استقبال البيانات من الفورم
-$hotel = $_POST['hotel'];
-$date = $_POST['date'];
-$roomType = $_POST['roomType'];
-$phone = $_POST['phone'];
-$email = $_POST['email'];
 
-// إدخال البيانات إلى الجدول
-$sql = "INSERT INTO bookings (hotel, date, room_type, phone, email)
-VALUES ('$hotel', '$date', '$roomType', '$phone', '$email')";
-
-if ($conn->query($sql) === TRUE) {
-    echo "<h2 style='color:green;text-align:center;margin-top:50px;'>Booking Successful!</h2>";
-    echo "<p style='text-align:center;'><a href='index.html'>Back to Home</a></p>";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+// جملة الإدخال
+$sql = "INSERT INTO bookings (hotel, booking_date, room_type, phone, email) 
+        VALUES ('$_POST[hotel]', '$_POST[date]', '$_POST[roomType]', '$_POST[phone]', '$_POST[email]')";
+// تنفيذ الإدخال
+if (!mysqli_query($con, $sql)) {
+    die('Cannot add: ' . mysqli_error($con));
 }
 
-$conn->close();
+echo "1 record added successfully.";
+
+mysqli_close($con);
 ?>
