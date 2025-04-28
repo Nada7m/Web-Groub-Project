@@ -3,7 +3,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-	  font-family:"palatino";
+	  font-family:'palatino';
     }
 
     /* الهيدر */
@@ -13,8 +13,9 @@
       align-items: center;
 	  text-align: center;
       padding: 15px 50px;
-      height: 60px;
+      height: 90px;
 	  font-family:'caveat';
+	  
     }
 
     .logo-container {
