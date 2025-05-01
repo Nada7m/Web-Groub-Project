@@ -20,15 +20,16 @@
         }
 
         .overlay {
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.4);
             height: 100%;
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: white;
+            color:white;
             padding: 20px;
+			
         }
 
         h1 {
@@ -60,7 +61,7 @@
         .form-container button {
             width: 100%;
             padding: 12px;
-            background-color: #007BFF;
+            background-color: #20A2CD;
             border: none;
             color: white;
             font-size: 1em;
@@ -70,7 +71,7 @@
         }
 
         .form-container button:hover {
-            background-color: #0056b3;
+            background-color: #F83C19;
         }
     </style>
 </head>
@@ -99,6 +100,10 @@
     <h1>Book Your Stay Now</h1>
     <div class="form-container">
         <form action="book.php" method="post">
+		
+		 <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter your Name" required>
+			
             <label for="hotel">Select Hotel:</label>
             <select name="hotel" id="hotel" required>
             <option value="">--Choose a hotel--</option>
@@ -114,10 +119,10 @@
                 <option value="Ashford Castle – County Mayo, Ireland">Ashford Castle – County Mayo, Ireland</option>
             </select>
             <label for="date">Select Date:</label>
-            <input type="date" name="date" id="date" required>
+            <input type="date" name="booking_date" id="date" required>
 
             <label for="roomType">Room Type:</label>
-            <select name="roomType" id="roomType" required>
+            <select name="room_type" id="roomType" required>
                 <option value="">--Choose room type--</option>
                 <option value="Suite">Suite</option>
                 <option value="Deluxe Room">Deluxe Room</option>
