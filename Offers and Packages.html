@@ -10,22 +10,86 @@
 body {
 margin:0;
 padding: 0;
-background-image:url("zhotelbackgraound.jpg");
+background-color:#eafaf1;
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-position: center;
 font-family:'palatino'}
 
-</style>
- </head>
 
+
+.summer-countdown {
+  background-color: #ADD8E6; /* أزرق فاتح */
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 80%;
+}
+
+#summer-title {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: #003366;
+}
+
+.timebox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* مسافة بين الأوقات */
+  flex-wrap: wrap; /* عشان لو الشاشة صغيرة يلفون تلقائي */
+}
+
+.time {
+  background: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+.time h2 {
+  font-size: 36px;
+  margin: 0;
+  color: #003366;
+}
+
+.time p {
+  margin: 5px 0 0;
+  color: #003366;
+  font-weight: bold;
+}
+
+.offers {
+display: grid;
+grid-template-columns: 300px 300px 300px;
+justify-content: center;
+align-items: center;
+gap: 10px; 
+margin: 20px ; 
+padding: 10px; 
+border-radius: 10px;}
+
+.offer img {
+width: 100%;
+height: 100%;
+border-radius: 10px;
+transition: transform 0.3s ease;}
+
+.offer:hover img {
+transform: scale(1.05); /*تكبر بنسبة خفيفة 5% */
+border-radius: 10px;}
+</style>
+
+
+
+ </head>
 <body>
 
  <!-- الهيدر -->
   <header>
     <div class="logo-container">
-      <img src="solandLogo.png" alt="Soland Logo">
+      <img src="solandLogo.png" >
       <h1>SOLAND</h1>
     </div>
   </header>
@@ -42,21 +106,87 @@ font-family:'palatino'}
     <a href="Contact Us and Feedback">Contact Us and Feedback</a>
   </nav>
   
+<div class="summer-countdown">
+  <h1 id="summer-title">Hurry and experience our offers and packages before the end of summer!</h1>
+  <div class="timebox">
+    <div class="time">
+      <h2 id="days">00</h2>
+      <p>Days</p>
+    </div>
+    <div class="time">
+      <h2 id="hours">00</h2>
+      <p>Hours</p>
+    </div>
+    <div class="time">
+      <h2 id="minutes">00</h2>
+      <p>Minutes</p>
+    </div>
+    <div class="time">
+      <h2 id="seconds">00</h2>
+      <p>Seconds</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="offers">
+  <div class="offer">
+    <img src="zPackage.jpg" >
+  </div>
+  <div class="offer">
+    <img src="zFlight.jpg">
+  </div>
+  <div class="offer">
+    <img src="zPhoto.jpg">
+  </div>
+</div>
+  
+  
   <footer>
   <div>
     &copy; 2025 SOLAND. All rights reserved.
   </div>
   <div style="margin-top: 10px;">
     <a href="https://www.tiktok.com/@soland" target="_blank" style="margin: 0 10px;">
-      <img src="https://play-lh.googleusercontent.com/BmUViDVOKNJe0GYJe22hsr7juFndRVbvr1fGmHGXqHfJjNAXjd26bfuGRQpVrpJ6YbA" alt="TikTok" style="width: 24px; height: 24px;">
+      <img src="https://play-lh.googleusercontent.com/BmUViDVOKNJe0GYJe22hsr7juFndRVbvr1fGmHGXqHfJjNAXjd26bfuGRQpVrpJ6YbA"  style="width: 24px; height: 24px;">
     </a>
     <a href="https://www.twitter.com/soland" target="_blank" style="margin: 0 10px;">
-      <img src="https://play-lh.googleusercontent.com/XyI6Hyz9AFg7E_joVzX2zh6CpWm9B2DG2JuEz5meCFVm4-wTKTnHgqbmg62iFKe4Gzca=w240-h480-rw" alt="X" style="width: 24px; height: 24px;">
+      <img src="https://play-lh.googleusercontent.com/XyI6Hyz9AFg7E_joVzX2zh6CpWm9B2DG2JuEz5meCFVm4-wTKTnHgqbmg62iFKe4Gzca=w240-h480-rw"  style="width: 24px; height: 24px;">
     </a>
     <a href="https://www.instagram.com/soland" target="_blank" style="margin: 0 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"  style="width: 24px; height: 24px;">
     </a>
   </div>
+
+
+<script>
+  const Days = document.getElementById('days');
+  const Hours = document.getElementById('hours');
+  const Minutes = document.getElementById('minutes');
+  const Seconds = document.getElementById('seconds');
+
+  // تاريخ نهاية الصيف
+  const targetDate = new Date("August 31, 2025 23:59:59").getTime();
+
+  function timer() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    Days.innerHTML = days;
+    Hours.innerHTML = hours;
+    Minutes.innerHTML = minutes;
+    Seconds.innerHTML = seconds;
+  }
+
+  timer();
+  const interval = setInterval(timer, 1000);
+</script>
 
 </body>
 </html>
