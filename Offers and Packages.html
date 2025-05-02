@@ -10,55 +10,27 @@
 body {
 margin:0;
 padding: 0;
-background-color:#eafaf1;
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: center;
-font-family:'palatino'}
-
-
-
-.summer-countdown {
-  background-color: #ADD8E6; /* أزرق فاتح */
-  text-align: center;
-  padding: 30px 20px;
-  border-radius: 10px;
-  margin: 20px auto;
-  width: 80%;
+background-color:#d5f5e3 ;
+font-family:'palatino';
 }
 
-#summer-title {
-  font-size: 22px;
-  margin-bottom: 30px;
-  color: #003366;
+.countdown {
+background-color:#196f3d   ; 
+text-align: center;
+padding: 9px ;
+font-size: 15px;
+color: white ;
+height:160px;
 }
 
-.timebox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px; /* مسافة بين الأوقات */
-  flex-wrap: wrap; /* عشان لو الشاشة صغيرة يلفون تلقائي */
-}
 
 .time {
-  background: white;
-  padding: 15px 25px;
-  border-radius: 10px;
-}
-
-.time h2 {
-  font-size: 36px;
-  margin: 0;
-  color: #003366;
-}
-
-.time p {
-  margin: 5px 0 0;
-  color: #003366;
-  font-weight: bold;
-}
+display: flex;
+justify-content: center;
+gap: 30px; /* مسافة بين الأوقات */
+font-size: 29px;
+margin: 0;
+color: white;}
 
 .offers {
 display: grid;
@@ -98,17 +70,17 @@ border-radius: 10px;}
   <nav>
     <a href="Main Page.HTML">Home</a>
     <a href="About us.html">About Us</a>
-    <a href="Destinations.html">Destinations</a>
+    <a href="Destination.html">Destinations</a>
     <a href="Hotel List.html">Hotel List</a>
     <a href="Offers and Packages.html">Offers and Packages</a>
     <a href="Booking.html">Booking</a>
-    <a href="LogIn.html">Log In</a>
-    <a href="Contact Us and Feedback">Contact Us and Feedback</a>
+     <a href="Signup.html">Sign up</a>
+    <a href="FAQ.html">FAQ</a>
   </nav>
   
-<div class="summer-countdown">
-  <h1 id="summer-title">Hurry and experience our offers and packages before the end of summer!</h1>
-  <div class="timebox">
+<div class="countdown">
+  <h1>Hurry and experience our offers and packages before the end of summer!☀️🎉</h1>
+  <div class="time">
     <div class="time">
       <h2 id="days">00</h2>
       <p>Days</p>
@@ -158,7 +130,7 @@ border-radius: 10px;}
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"  style="width: 24px; height: 24px;">
     </a>
   </div>
-
+</footer>
 
 <script>
   const Days = document.getElementById('days');
@@ -167,7 +139,7 @@ border-radius: 10px;}
   const Seconds = document.getElementById('seconds');
 
   // تاريخ نهاية الصيف
-  const targetDate = new Date("August 31, 2025 23:59:59").getTime();
+  const targetDate = new Date("july 31, 2025 23:59:59").getTime();
 
   function timer() {
     const now = new Date().getTime();

@@ -1,9 +1,6 @@
 <html>
 <head> 
-<title>Hotel Booking</title>
-
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Booking</title>
 	<link rel="stylesheet" href="SOLAND.css">
 	<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Caveat'>
 
@@ -19,59 +16,6 @@
 
         }
 
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.6);
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        .form-container {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            border-radius: 10px;
-            color: black;
-            max-width: 400px;
-            width: 90%;
-            font-family: Arial, sans-serif;
-
-		
-        }
-
-        .form-container select,
-        .form-container input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .form-container button {
-            width: 100%;
-            padding: 12px;
-            background-color: #007BFF;
-            border: none;
-            color: white;
-            font-size: 1em;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        .form-container button:hover {
-            background-color: #0056b3;
-        }
     </style>
 </head>
 <body>
@@ -88,56 +32,19 @@
   <nav>
     <a href="Main Page.HTML">Home</a>
     <a href="About us.html">About Us</a>
-    <a href="Destinations.html">Destinations</a>
+    <a href="Destination.html">Destinations</a>
     <a href="Hotel List.html">Hotel List</a>
     <a href="Offers and Packages.html">Offers and Packages</a>
     <a href="Booking.html">Booking</a>
-    <a href="LogIn.html">Log In</a>
-    <a href="Contact Us and Feedback">Contact Us and Feedback</a>
+     <a href="Signup.html">Sign up</a>
+    <a href="FAQ.html">FAQ</a>
   </nav>
-<div class="overlay">
-    <h1>Book Your Stay Now</h1>
-    <div class="form-container">
-        <form action="book.php" method="post">
-            <label for="hotel">Select Hotel:</label>
-            <select name="hotel" id="hotel" required>
-            <option value="">--Choose a hotel--</option>
-                <option value="Burj Al Arab – Dubai, UAE">Burj Al Arab – Dubai, UAE</option>
-                <option value="The Plaza – New York, USA">The Plaza – New York, USA</option>
-                <option value="Hotel de Crillon – Paris, France">Hotel de Crillon – Paris, France</option>
-                <option value="Four Seasons Resort – Bora Bora, French Polynesia">Four Seasons Resort – Bora Bora, French Polynesia</option>
-                <option value="Aman Tokyo – Tokyo, Japan">Aman Tokyo – Tokyo, Japan</option>
-                <option value="Ritz-Carlton – Kyoto, Japan">Ritz-Carlton – Kyoto, Japan</option>
-                <option value="Singita Sabi Sand – South Africa">Singita Sabi Sand – South Africa</option>
-                <option value="Mandarin Oriental – Bangkok, Thailand">Mandarin Oriental – Bangkok, Thailand</option>
-                <option value="The Brando – Tetiaroa, French Polynesia">The Brando – Tetiaroa, French Polynesia</option>
-                <option value="Ashford Castle – County Mayo, Ireland">Ashford Castle – County Mayo, Ireland</option>
-            </select>
-            <label for="date">Select Date:</label>
-            <input type="date" name="date" id="date" required>
 
-            <label for="roomType">Room Type:</label>
-            <select name="roomType" id="roomType" required>
-                <option value="">--Choose room type--</option>
-                <option value="Suite">Suite</option>
-                <option value="Deluxe Room">Deluxe Room</option>
-                <option value="Standard Room">Standard Room</option>
-                <option value="Family Room">Family Room</option>
-            </select>
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" required>
 
-            <label for="email">Email Address:</label>
-            <input type="email" name="email" id="email" placeholder="Enter your email" required>
 
-            <button type="submit">Book Now</button>
-        </form>
-    </div>
-</div>
 
-<footer>
-  <div>
+
     &copy; 2025 SOLAND. All rights reserved.
   </div>
   <div style="margin-top: 10px;">
