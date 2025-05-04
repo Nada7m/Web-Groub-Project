@@ -3,31 +3,63 @@
 <title> Booking</title>
 	<link rel="stylesheet" href="SOLAND.css">
 	<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Caveat'>
+<style>
+body {
+        height: 100%;
+        margin: 0;
+        background-image:url("zFlight.webp");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+	    font-family:'palatino';}
 
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            background-image:url("zhotelbackgraound.jpg");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-			font-family:'palatino';
+.form-container {
+      background-color: rgba(255,255,255,0.9);
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);}
+h2 {
+ text-align:center;
+	  font-size:28px;}
 
-        }
+label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #023e8a}
 
-    </style>
-</head>
-<body>
+input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid ;
+      font-size: 16px;}
+.radio {
+      display: flex;}
 
+.radio-group label {
+      display: flex;
+      align-items: center;}
+button {
+      margin-top: 25px;
+      background-color: #CA762B;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;}
+
+button:hover {
+      background-color: #c73010;}
+ </style></head><body>
  <!-- الهيدر -->
   <header>
-    <div class="logo-container">
+    <div class="logo">
       <img src="solandLogo.png" alt="Soland Logo">
       <h1>SOLAND</h1>
     </div>
   </header>
-
   <!-- شريط التنقل -->
   <nav>
     <a href="Main Page.HTML">Home</a>
@@ -39,29 +71,63 @@
      <a href="Signup.html">Sign up</a>
     <a href="FAQ.html">FAQ</a>
   </nav>
+<div class="form-container">
+<h2>What are you waiting for? Book your ticket now!</h2>
+  <form action="flightbooking.php" method="POST">
 
+    <label for="from">From (Departure Country):</label>
+    <input type="text" id="from" name="from" required>
 
+    <label for="to">To (Arrival Country):</label>
+    <input type="text" id="to" name="to" required>
 
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="username"required>
 
+    <label for="id">National ID / Passport Number:</label>
+    <input type="text" id="id" name="id" required>
 
+    <label for="date">Departure Date:</label>
+    <input type="date" id="date" name="date" required>
+<label>Departure Time:</label>
+<div class="radio">
+  <label><input type="radio" name="time" value="6" > 6:00</label>
+  <label><input type="radio" name="time" value="9"> 9:00</label>
+  <label><input type="radio" name="time" value="12"> 12:00</label>
+  <label><input type="radio" name="time" value="15"> 15:00</label>
+  <label><input type="radio" name="time" value="18"> 18:00</label>
+</div>
+    <label for="class">Flight Class:</label>
+    <select id="class" name="class">
+      <option value="economy">Economy</option>
+      <option value="business">Business</option>
+      <option value="first">First Class</option>
+    </select>
 
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label>Payment Method:</label>
+    <div class="radio">
+      <label><input type="radio" name="payment" value="mada" required> Mada</label>
+      <label><input type="radio" name="payment" value="visa"> Visa</label>
+      <label><input type="radio" name="payment" value="applepay"> Apple Pay</label>
+    </div>
+
+    <button type="submit">Book Now</button>
+  </form>
+</div>
+  <!-- التذييل -->
+<footer>
+  <div>
     &copy; 2025 SOLAND. All rights reserved.
   </div>
   <div style="margin-top: 10px;">
-    <a href="https://www.tiktok.com/@soland" target="_blank" style="margin: 0 10px;">
-      <img src="https://play-lh.googleusercontent.com/BmUViDVOKNJe0GYJe22hsr7juFndRVbvr1fGmHGXqHfJjNAXjd26bfuGRQpVrpJ6YbA" alt="TikTok" style="width: 24px; height: 24px;">
-    </a>
-    <a href="https://www.twitter.com/soland" target="_blank" style="margin: 0 10px;">
-      <img src="https://play-lh.googleusercontent.com/XyI6Hyz9AFg7E_joVzX2zh6CpWm9B2DG2JuEz5meCFVm4-wTKTnHgqbmg62iFKe4Gzca=w240-h480-rw" alt="X" style="width: 24px; height: 24px;">
-    </a>
-    <a href="https://www.instagram.com/soland" target="_blank" style="margin: 0 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;">
-    </a>
+    <a><img src="https://play-lh.googleusercontent.com/BmUViDVOKNJe0GYJe22hsr7juFndRVbvr1fGmHGXqHfJjNAXjd26bfuGRQpVrpJ6YbA"  style="width: 24px; height: 24px;"></a>
+    <a><img src="https://play-lh.googleusercontent.com/XyI6Hyz9AFg7E_joVzX2zh6CpWm9B2DG2JuEz5meCFVm4-wTKTnHgqbmg62iFKe4Gzca=w240-h480-rw"  style="width: 24px; height: 24px;"></a>
+    <a><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"  style="width: 24px; height: 24px;"></a>
   </div>
-  </footer>
+</footer>
 
 </body>
-
-
-
 </html>

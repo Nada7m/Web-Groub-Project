@@ -15,24 +15,20 @@ font-family:'palatino'}
 
 h2{
 text-align:center;
-font-size:30;
-}
+font-size:30;}
 .signup {
 background: white;
 padding: 30px;
 border-radius: 15px;
 width: 320px;
-margin:30 auto;
-
-}
+margin:30 auto;}
 
 .signupf input {
 width: 100%;
 padding: 12px;
 border: 1px solid;
 border-radius: 8px;
- margin-bottom: 15px;
-}
+margin-bottom: 15px;}
 
 button {
 width: 100%;
@@ -41,29 +37,22 @@ background-color: #007bff;
 color: white;
 border: none;
 border-radius: 8px;
-font-size: 16px;
-}
+font-size: 16px;}
 
 .sbutton :hover {
- background-color: #0056b3;
-}
+ background-color: #0056b3;}
 
 .login {
 text-align: center;
 margin: 15px 0;
-font-size: 14px;
-}
-
-
-   
-</style>
-</head>
-
+font-size: 14px;}
+  
+</style></head>
 <body>
 
   <!-- الهيدر -->
   <header>
-    <div class="logo-container">
+    <div class="logo">
       <img src="solandLogo.png" >
       <h1>SOLAND</h1>
     </div>
@@ -73,55 +62,48 @@ font-size: 14px;
   <nav>
     <a href="Main Page.HTML">Home</a>
     <a href="About us.html">About Us</a>
-    <a href="Destinations.html">Destinations</a>
+    <a href="Destination.html">Destinations</a>
     <a href="Hotel List.html">Hotel List</a>
     <a href="Offers and Packages.html">Offers and Packages</a>
     <a href="Booking.html">Booking</a>
      <a href="Signup.html">Sign up</a>
     <a href="FAQ.html">FAQ</a>
   </nav>
-  
- 
 <div class="signup">
-  <form class="signupf" action="sign.php" method="post">
+  <form class="signupf" action="sign.php" method="post"  onsubmit="return pwdconfirm();">
     <h2>Sign up</h2>
-
     <label>Username</label>
     <input type="text" id="username" name="name" required>
-
     <label>Email</label>
     <input type="email" id="email" name="email" required>
-
     <label >Password</label>
     <input type="password" id="password" name="pwd" required>
-
     <label >Confirm Password</label>
     <input type="password" id="confirm_password" name="confirmpass" required>
-
     <button type="submit" >Signup</button>
-
     <p class="login">Already have an account? <a href="Login.html">Login</a></p>
-
   </form>
 </div>
-
-   
+  <!-- التذييل -->
 <footer>
   <div>
     &copy; 2025 SOLAND. All rights reserved.
   </div>
   <div style="margin-top: 10px;">
-    <a href="https://www.tiktok.com/@soland" target="_blank" style="margin: 0 10px;">
-      <img src="https://play-lh.googleusercontent.com/BmUViDVOKNJe0GYJe22hsr7juFndRVbvr1fGmHGXqHfJjNAXjd26bfuGRQpVrpJ6YbA" alt="TikTok" style="width: 24px; height: 24px;">
-    </a>
-    <a href="https://www.twitter.com/soland" target="_blank" style="margin: 0 10px;">
-      <img src="https://play-lh.googleusercontent.com/XyI6Hyz9AFg7E_joVzX2zh6CpWm9B2DG2JuEz5meCFVm4-wTKTnHgqbmg62iFKe4Gzca=w240-h480-rw" alt="X" style="width: 24px; height: 24px;">
-    </a>
-    <a href="https://www.instagram.com/soland" target="_blank" style="margin: 0 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 24px; height: 24px;">
-    </a>
+    <a><img src="https://play-lh.googleusercontent.com/BmUViDVOKNJe0GYJe22hsr7juFndRVbvr1fGmHGXqHfJjNAXjd26bfuGRQpVrpJ6YbA"  style="width: 24px; height: 24px;"></a>
+    <a><img src="https://play-lh.googleusercontent.com/XyI6Hyz9AFg7E_joVzX2zh6CpWm9B2DG2JuEz5meCFVm4-wTKTnHgqbmg62iFKe4Gzca=w240-h480-rw"  style="width: 24px; height: 24px;"></a>
+    <a><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"  style="width: 24px; height: 24px;"></a>
   </div>
-  </footer>
+</footer>
+<script>
+function pwdconfirm () {
 
+if( document.getElementById('password').value != document.getElementById('confirm_password').value) {
+	alert("Password did‘nt match, try again.");
+	return false;}
+	
+	else {
+        return true;}}
+</script>
 </body>
 </html>

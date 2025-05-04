@@ -1,18 +1,12 @@
-<html>
-
-
-<head> <title> Offers and Packages </title>
+<html><head> <title> Offers and Packages </title>
 <link rel="stylesheet" href="SOLAND.css">
-<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Caveat'>
-
-<style>
+<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Caveat'><style>
 
 body {
 margin:0;
 padding: 0;
 background-color:#d5f5e3 ;
-font-family:'palatino';
-}
+font-family:'palatino';}
 
 .countdown {
 background-color:#196f3d   ; 
@@ -20,14 +14,12 @@ text-align: center;
 padding: 9px ;
 font-size: 15px;
 color: white ;
-height:160px;
-}
-
+height:110px;}
 
 .time {
 display: flex;
 justify-content: center;
-gap: 30px; /* مسافة بين الأوقات */
+gap: 30px; 
 font-size: 29px;
 margin: 0;
 color: white;}
@@ -46,26 +38,20 @@ border-radius: 10px;}
 width: 100%;
 height: 100%;
 border-radius: 10px;
-transition: transform 0.3s ease;}
+transition: transform 0.2S ease;}
 
 .offer:hover img {
-transform: scale(1.05); /*تكبر بنسبة خفيفة 5% */
+transform: scale(1.05); 
 border-radius: 10px;}
-</style>
-
-
-
- </head>
+</style></head>
 <body>
-
  <!-- الهيدر -->
   <header>
-    <div class="logo-container">
+    <div class="logo">
       <img src="solandLogo.png" >
       <h1>SOLAND</h1>
     </div>
   </header>
-
   <!-- شريط التنقل -->
   <nav>
     <a href="Main Page.HTML">Home</a>
@@ -77,7 +63,6 @@ border-radius: 10px;}
      <a href="Signup.html">Sign up</a>
     <a href="FAQ.html">FAQ</a>
   </nav>
-  
 <div class="countdown">
   <h1>Hurry and experience our offers and packages before the end of summer!☀️🎉</h1>
   <div class="time">
@@ -100,8 +85,6 @@ border-radius: 10px;}
   </div>
 </div>
 
-
-
 <div class="offers">
   <div class="offer">
     <img src="zPackage.jpg" >
@@ -113,32 +96,23 @@ border-radius: 10px;}
     <img src="zPhoto.jpg">
   </div>
 </div>
-  
-  
-  <footer>
+   <!-- التذييل -->
+<footer>
   <div>
     &copy; 2025 SOLAND. All rights reserved.
   </div>
   <div style="margin-top: 10px;">
-    <a href="https://www.tiktok.com/@soland" target="_blank" style="margin: 0 10px;">
-      <img src="https://play-lh.googleusercontent.com/BmUViDVOKNJe0GYJe22hsr7juFndRVbvr1fGmHGXqHfJjNAXjd26bfuGRQpVrpJ6YbA"  style="width: 24px; height: 24px;">
-    </a>
-    <a href="https://www.twitter.com/soland" target="_blank" style="margin: 0 10px;">
-      <img src="https://play-lh.googleusercontent.com/XyI6Hyz9AFg7E_joVzX2zh6CpWm9B2DG2JuEz5meCFVm4-wTKTnHgqbmg62iFKe4Gzca=w240-h480-rw"  style="width: 24px; height: 24px;">
-    </a>
-    <a href="https://www.instagram.com/soland" target="_blank" style="margin: 0 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"  style="width: 24px; height: 24px;">
-    </a>
+    <a><img src="https://play-lh.googleusercontent.com/BmUViDVOKNJe0GYJe22hsr7juFndRVbvr1fGmHGXqHfJjNAXjd26bfuGRQpVrpJ6YbA"  style="width: 24px; height: 24px;"></a>
+    <a><img src="https://play-lh.googleusercontent.com/XyI6Hyz9AFg7E_joVzX2zh6CpWm9B2DG2JuEz5meCFVm4-wTKTnHgqbmg62iFKe4Gzca=w240-h480-rw"  style="width: 24px; height: 24px;"></a>
+    <a><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"  style="width: 24px; height: 24px;"></a>
   </div>
 </footer>
-
 <script>
   const Days = document.getElementById('days');
   const Hours = document.getElementById('hours');
   const Minutes = document.getElementById('minutes');
   const Seconds = document.getElementById('seconds');
 
-  // تاريخ نهاية الصيف
   const targetDate = new Date("july 31, 2025 23:59:59").getTime();
 
   function timer() {
@@ -155,7 +129,6 @@ border-radius: 10px;}
     Minutes.innerHTML = minutes;
     Seconds.innerHTML = seconds;
   }
-
   timer();
   const interval = setInterval(timer, 1000);
 </script>

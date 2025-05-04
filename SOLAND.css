@@ -1,13 +1,10 @@
-<style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-	  font-family:'palatino';
-    }
 
-    /* الهيدر */
-    header {
+* {margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family:'palatino';
+    }
+header {
       background-color: #20A2CD;
       display: flex;
       align-items: center;
@@ -15,31 +12,26 @@
       padding: 15px 50px;
       height: 90px;
 	  font-family:'caveat';
-	  
-    }
+	  text-shadow: 2px 2px 8px #000;}
 
-    .logo-container {
+    .logo {
       display: flex;
       align-items: center;
       gap: 20px;
-    }
+	  text-shadow: 2px 2px 8px #000;}
 
-    .logo-container img {
-      height: 90px;
-    }
+    .logo img {
+      height: 90px;}
 
-    .logo-container h1 {
+    .logo h1 {
       color: white;
       font-size: 48px;
-      font-weight: bold;
-    }
+      font-weight: bold;}
 
-    /* شريط التنقل */
     nav {
       background-color: #10597F;
       display: flex;
-      padding: 5px 5px;
-    }
+      padding: 5px 5px;}
 
     nav a {
       color: white;
@@ -47,24 +39,16 @@
       margin: 0 15px;
       font-size: 20px;
       padding: 10px;
-      transition: 0.3s;
-    }
+      transition: 0.3s;}
 
     nav a:hover {
       background-color: #CA762B;
-      border-radius: 5px;
-    }
+      border-radius: 5px;}
 
-   
-   
-    /* التذييل */
-    footer {
+     footer {
       text-align: center;
       padding: 20px;
       background-color: #20A2CD;
       color: white;
-	  margin:0 ;
-    }
-
-  </style>
+	  margin:0 ;}
 
